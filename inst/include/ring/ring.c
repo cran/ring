@@ -6,7 +6,7 @@
 bool ring_buffer_handle_overflow(ring_buffer *buffer, size_t n);
 const data_t * ring_buffer_end(const ring_buffer *buffer);
 data_t * ring_buffer_nextp(ring_buffer *buffer, const data_t *p);
-int imin(int a, int b);
+size_t imin(size_t a, size_t b);
 
 #ifdef RING_USE_STDLIB_ALLOC
 #include <stdlib.h>
@@ -42,13 +42,16 @@ ring_buffer * ring_buffer_create(size_t size, size_t stride,
 }
 
 void ring_buffer_destroy(ring_buffer *buffer) {
+  if (buffer) {
 #ifdef RING_USE_STDLIB_ALLOC
-  free(buffer->data);
-  free(buffer);
+    free(buffer->data);
+    free(buffer);
 #else
-  Free(buffer->data);
-  Free(buffer);
+    Free(buffer->data);
+    Free(buffer);
 #endif
+    buffer = NULL;
+  }
 }
 
 ring_buffer * ring_buffer_duplicate(const ring_buffer *buffer) {
@@ -446,7 +449,7 @@ const void * ring_buffer_search_linear(const ring_buffer *buffer,
 const void * ring_buffer_search_bisect(const ring_buffer *buffer, size_t i,
                                        ring_predicate *pred, void *data) {
   const size_t n = ring_buffer_used(buffer, false);
-  if (n == 0) {
+  if (n == 0 || i >= n) {
     return NULL;
   }
   int i0 = i, i1 = i;
@@ -456,7 +459,7 @@ const void * ring_buffer_search_bisect(const ring_buffer *buffer, size_t i,
   // Predicate should return true if we should look further back
   // (increase the tail offset), false otherwise.
   if (pred((void*) x0, data)) { // advance up until we hit the top
-    if (i0 == (int)n - 1) { // guess is already *at* the top.
+    if (i0 >= (int)n - 1) { // guess is already *at* the top.
       return x0;
     }
     i1 = i0 + 1;
@@ -538,7 +541,7 @@ data_t * ring_buffer_nextp(ring_buffer *buffer, const data_t *p) {
   return buffer->data + (p - buffer->data) % ring_buffer_bytes_data(buffer);
 }
 
-int imin(int a, int b) {
+size_t imin(size_t a, size_t b) {
   return a < b ? a : b;
 }
 

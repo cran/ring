@@ -1,13 +1,14 @@
 # ring
 
-[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](http://www.repostatus.org/badges/latest/active.svg)](http://www.repostatus.org/#active)
-[![Linux Build Status](https://travis-ci.org/richfitz/ring.svg?branch=master)](https://travis-ci.org/richfitz/ring)
-[![Windows Build status](https://ci.appveyor.com/api/projects/status/github/richfitz/ring?svg=true)](https://ci.appveyor.com/project/richfitz/ring)
-[![codecov.io](https://codecov.io/github/richfitz/ring/coverage.svg?branch=master)](https://codecov.io/github/richfitz/ring?branch=master)
+<!-- badges: start -->
+[![Project Status: Active - The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
+[![R build status](https://github.com/mrc-ide/ring/workflows/R-CMD-check/badge.svg)](https://github.com/mrc-ide/ring/actions)
+[![codecov.io](https://codecov.io/github/mrc-ide/ring/coverage.svg?branch=master)](https://codecov.io/github/mrc-ide/ring?branch=master)
+<!-- badges: end -->
 
 > Ring buffers in R and C
 
-Ring buffers (or circular buffers) are like arrays that seem circular; data is written and read in a first-in-first-out (FIFO) style, but once allocated subsequent writes do not cause memory allocations.  Circular buffers are useful for collecting and processing data streams or for queues (with a fixed maximum size).  I use them to implement a solver for delay differential equations in [dde](https://github.com/richfitz/dde).
+Ring buffers (or circular buffers) are like arrays that seem circular; data is written and read in a first-in-first-out (FIFO) style, but once allocated subsequent writes do not cause memory allocations.  Circular buffers are useful for collecting and processing data streams or for queues (with a fixed maximum size).  I use them to implement a solver for delay differential equations in [dde](https://github.com/mrc-ide/dde).
 
 This package provides two implementations of ring buffers:
 
@@ -24,20 +25,20 @@ Both buffer types will refuse to underflow (return elements beyond those that ha
 * grow buffer: expand the buffer geometrically to fit required elements (which will require additional memory allocations and copies)
 * throw error: refuse to overflow
 
-Depending on your application, these ring buffers may or may not be faster than manually copying data around in vectors.  The benefit of this package rather than doing it by hand is abstracting away a lot of subtle bookkeeping and keeping an inteface that is fairly high level.  However, for C applications, using `ring_buffer_bytes` via the C interface (using `LinkingTo`) is likely to be very fast as it avoids all copies.
+Depending on your application, these ring buffers may or may not be faster than manually copying data around in vectors.  The benefit of this package rather than doing it by hand is abstracting away a lot of subtle bookkeeping and keeping an interface that is fairly high level.  However, for C applications, using `ring_buffer_bytes` via the C interface (using `LinkingTo`) is likely to be very fast as it avoids all copies.
 
-See the [reference documentation](https://richfitz.github.io/ring) for details.
+See the [reference documentation](https://mrc-ide.github.io/ring/) for details.
 
 ## Usage
 
-See the vignette [online](https://richfitz.github.io/ring/vignettes/ring.html) (the vignette is not currently shipped with the pacakge as installed via `install_github`, though once the package in on CRAN it will be available with `code(vignette("ring"))`.
+The main package vignette (`vignette("ring")`) contains an introduction and basic usage.
 
-A second [vignette](https://richfitz.github.io/ring/vignettes/ring_applications.html) describes possible data structures using a ring buffer.
+A second vignette (`vignette("ring_applications")`) describes possible data structures using a ring buffer.
 
-The reference documentation is also available [online](https://richfitz.github.io/ring), or from the package.
+The reference documentation is also available [online](https://mrc-ide.github.io/ring/), or from the package.
 
 ## License
 
-MIT + file LICENSE © [Rich FitzJohn](https://github.com/richfitz).
+MIT © Imperial College of Science, Technology and Medicine
 
-Please note that this project is released with a [Contributor Code of Conduct](CONDUCT.md). By participating in this project you agree to abide by its terms.
+Please note that this project is released with a [Contributor Code of Conduct](https://mrc-ide.github.io/ring/CONDUCT.html). By participating in this project you agree to abide by its terms.
