@@ -1,4 +1,4 @@
-ad7b13745216a1f413820e76444ddf45 *DESCRIPTION
+dd320ff0599daff7f7421ab7e3bf80f9 *DESCRIPTION
 616f5310dc02e3ef637257c6ac093002 *LICENSE
 d3c34e8e87407eae607d5e169dcc46d6 *NAMESPACE
 fb3a89d24fa9f6e36461ba89686adfe3 *NEWS.md
@@ -9,15 +9,15 @@ da02e365214df2af98e19ec08df58bf3 *R/ring_buffer_bytes_typed.R
 08e0fe92ac67797bc9e13ea882a933be *R/ring_buffer_env.R
 0d4b2c0fb4767d7d001f2f7874bfe5b0 *R/utils.R
 ad84a134718c19300176b8534bbc64cc *R/zzz.R
-57ccfffa27076d33d5be637d100278ea *README.md
-1230a6eac898e900a6e074a465fd65f0 *build/vignette.rds
-75136dce82758e14b67253a833361c3b *inst/WORDLIST
+276955b946856b4453a6420c5641dd8e *README.md
+544411f14b96ad41769a89c4896f5b78 *build/vignette.rds
+4fc98ab28cd94c18b569a0354403d786 *inst/WORDLIST
 5fb8ed8d5f2bf99b6cca6c27fc0db8d5 *inst/doc/ring.R
 2927c942310675ab60beabcd4ec2bfc7 *inst/doc/ring.Rmd
-16e46816090348afcfb914e708bc6281 *inst/doc/ring.html
+f2f0fc5fdfe719521246f0488b99948d *inst/doc/ring.html
 5b99aa6433724dd8c57518a28062a6df *inst/doc/ring_applications.R
 900dc468ca116fd8b0652698c248aa5e *inst/doc/ring_applications.Rmd
-4796c67962c4c7fec5552d6f09d6b809 *inst/doc/ring_applications.html
+42a06287c219634b6442ce7c1404928e *inst/doc/ring_applications.html
 455e38f317979f23653b600716b9bbe3 *inst/examples/example.c
 34581689a4f7522111e8fd33916cc35c *inst/examples/ring_matrix.R
 ea7df17feb079909de68c3ba0ab22512 *inst/examples/ring_vector.R
@@ -30,8 +30,8 @@ c067977c24caac0aaea7c9cc8d198dab *man/ring_buffer_bytes_translate.Rd
 5916f26216ff825201f6e3b2b1ecdb6e *man/ring_buffer_bytes_typed.Rd
 fed7260570bf29a7b9600b316d1924e5 *man/ring_buffer_env.Rd
 729b6945e7ac93ec27e4cc940b348c4d *src/Makevars
-1cf388831bbde60b281d4100231a10f6 *src/convert.c
-9df48b889c0d5b627abb3b0d9d34f20d *src/convert.h
+1d60c3d8a53aaff68803ba77107e518f *src/convert.c
+20ef2f5204a785139edc686f603af1ad *src/convert.h
 8353a5d3ae41f6eaa9383ac6400f3fed *src/registration.c
 d4159274cea469d55423077b465fe226 *src/ring.c
 e8e1e7c9936a020e2f737d615f6c3b88 *src/ring_r.c

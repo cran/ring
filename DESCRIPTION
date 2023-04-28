@@ -1,6 +1,6 @@
 Package: ring
 Title: Circular / Ring Buffers
-Version: 1.0.3
+Version: 1.0.4
 Authors@R: c(person("Rich", "FitzJohn", role = c("aut", "cre"),
                     email = "rich.fitzjohn@gmail.com"),
              person("Imperial College of Science, Technology and Medicine",
@@ -18,9 +18,9 @@ VignetteBuilder: knitr
 Language: en-GB
 Encoding: UTF-8
 NeedsCompilation: yes
-Packaged: 2021-06-15 08:36:35 UTC; rfitzjoh
+Packaged: 2023-04-28 09:15:58 UTC; rfitzjoh
 Author: Rich FitzJohn [aut, cre],
   Imperial College of Science, Technology and Medicine [cph]
 Maintainer: Rich FitzJohn <rich.fitzjohn@gmail.com>
 Repository: CRAN
-Date/Publication: 2021-06-15 12:40:02 UTC
+Date/Publication: 2023-04-28 10:00:02 UTC
