@@ -12,7 +12,7 @@
 
 <meta name="author" content="Rich FitzJohn" />
 
-<meta name="date" content="2023-04-28" />
+<meta name="date" content="2023-11-28" />
 
 <title>ring</title>
 
@@ -326,7 +326,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 
 <h1 class="title toc-ignore">ring</h1>
 <h4 class="author">Rich FitzJohn</h4>
-<h4 class="date">2023-04-28</h4>
+<h4 class="date">2023-11-28</h4>
 
 
 <div id="TOC">
@@ -564,7 +564,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <div class="sourceCode" id="cb78"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb78-1" title="1">buf<span class="op">$</span><span class="kw">push</span>(<span class="kw">as.raw</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">8</span>))</a></code></pre></div>
 <p>but if you pushed more or less it would be an error:</p>
 <div class="sourceCode" id="cb79"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb79-1" title="1">buf<span class="op">$</span><span class="kw">push</span>(<span class="kw">as.raw</span>(<span class="dv">1</span><span class="op">:</span><span class="dv">4</span>))</a></code></pre></div>
-<pre><code>## Error in buf$push(as.raw(1:4)): Incorrect size data (4 bytes); expected multiple of 8 bytes</code></pre>
+<pre><code>## Error in buf$push(as.raw(1:4)): Incorrect size data; expected multiple of 8 bytes</code></pre>
 <p>Reading happens in <em>logical</em> units, not bytes:</p>
 <div class="sourceCode" id="cb81"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb81-1" title="1">buf<span class="op">$</span><span class="kw">read</span>(<span class="dv">1</span>)</a></code></pre></div>
 <pre><code>## [1] 01 02 03 04 05 06 07 08</code></pre>
@@ -617,7 +617,7 @@ code > span.er { color: #a61717; background-color: #e3d2d2; }
 <pre><code>## [1] &quot;abcdefgh&quot;</code></pre>
 <p>But other length strings cannot be added:</p>
 <div class="sourceCode" id="cb105"><pre class="sourceCode r"><code class="sourceCode r"><a class="sourceLine" id="cb105-1" title="1">b<span class="op">$</span><span class="kw">push</span>(<span class="st">&quot;hello!&quot;</span>)</a></code></pre></div>
-<pre><code>## Error in super$push(self$.to(data)): Incorrect size data (6 bytes); expected multiple of 8 bytes</code></pre>
+<pre><code>## Error in super$push(self$.to(data)): Incorrect size data; expected multiple of 8 bytes</code></pre>
 <p>Probably this would be most useful storing just single characters as then it would make a buffer of <em>text</em>.</p>
 </div>
 </div>
