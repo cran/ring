@@ -1,4 +1,4 @@
-2993832363d5d13befa9013bdd4491aa *DESCRIPTION
+b3330caa0a4f29af27a1f39cc1527426 *DESCRIPTION
 5956e296217dbdb58ae3857c476910a0 *LICENSE
 d3c34e8e87407eae607d5e169dcc46d6 *NAMESPACE
 d7d382c00cfb69c66e69a62cc8e01a28 *NEWS.md
@@ -9,15 +9,15 @@ bb3bfd6785686bcbaf970c235444d84e *R/format.R
 d6977b186b2fc627772286f0fdb9de98 *R/ring_buffer_env.R
 0d4b2c0fb4767d7d001f2f7874bfe5b0 *R/utils.R
 ad84a134718c19300176b8534bbc64cc *R/zzz.R
-276955b946856b4453a6420c5641dd8e *README.md
-ec43f8356286c3055e637e53b91e7070 *build/vignette.rds
+eb258c297f84c9f258e44d787125bea4 *README.md
+c1234f839d44797ba4d42e8215607dae *build/vignette.rds
 4fc98ab28cd94c18b569a0354403d786 *inst/WORDLIST
-5fb8ed8d5f2bf99b6cca6c27fc0db8d5 *inst/doc/ring.R
-2927c942310675ab60beabcd4ec2bfc7 *inst/doc/ring.Rmd
-d0a1eed46aa336ec641a2bd2306b2a53 *inst/doc/ring.html
+63246ae6ce2b4eac3a38f1a7c642d424 *inst/doc/ring.R
+e7a2cf082d5677a922945bec9fb9814a *inst/doc/ring.Rmd
+1b82c8e016fe11e812cc55898e118cbc *inst/doc/ring.html
 5b99aa6433724dd8c57518a28062a6df *inst/doc/ring_applications.R
 9e0d51a86c9768104f4a34b624b069e3 *inst/doc/ring_applications.Rmd
-cdff61c5ca8a22628ed0f3d842590179 *inst/doc/ring_applications.html
+f40ae8220e85963e25a5681fae2967bf *inst/doc/ring_applications.html
 455e38f317979f23653b600716b9bbe3 *inst/examples/example.c
 34581689a4f7522111e8fd33916cc35c *inst/examples/ring_matrix.R
 ea7df17feb079909de68c3ba0ab22512 *inst/examples/ring_vector.R
@@ -30,7 +30,7 @@ a5799f10182f91fca44ea42899f66574 *inst/include/ring/ring.c
 75a924d850de40d0ffd42747654e0265 *man/ring_buffer_bytes_typed.Rd
 74201296e9fce7819135d12fe000061e *man/ring_buffer_env.Rd
 729b6945e7ac93ec27e4cc940b348c4d *src/Makevars
-258bec2229615320795b1468caf737b9 *src/convert.c
+46694a7d07533e70694e95756caff0bd *src/convert.c
 20ef2f5204a785139edc686f603af1ad *src/convert.h
 8353a5d3ae41f6eaa9383ac6400f3fed *src/registration.c
 d4159274cea469d55423077b465fe226 *src/ring.c
@@ -59,5 +59,5 @@ b65aedb1acb3608412eb567e3d0cce0b *tests/testthat/testing/NAMESPACE
 b32b47779e45b9b607710141b6269e51 *tests/testthat/testing/src/testing.c
 21fe33a51889b83bef031799cdf10233 *tests/testthat/testing/tests/testthat.R
 3eba83686d7d58744b274990c86df8d3 *tests/testthat/testing/tests/testthat/test.R
-2927c942310675ab60beabcd4ec2bfc7 *vignettes/ring.Rmd
+e7a2cf082d5677a922945bec9fb9814a *vignettes/ring.Rmd
 9e0d51a86c9768104f4a34b624b069e3 *vignettes/ring_applications.Rmd
